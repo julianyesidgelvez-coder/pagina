@@ -14,7 +14,7 @@ if (process.env.DATABASE_URL?.startsWith('libsql://')) {
     url: process.env.DATABASE_URL,
   })
   const adapter = new PrismaLibSQL(libsql)
-  prisma = globalForPrisma.prisma ?? new PrismaClient({ adapter })
+  prisma = globalForPrisma.prisma ?? new PrismaClient({ adapter } as any)
 } else {
   // Usar SQLite local para desarrollo
   prisma = globalForPrisma.prisma ?? new PrismaClient()
