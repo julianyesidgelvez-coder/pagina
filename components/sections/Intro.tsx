@@ -54,13 +54,9 @@ export default function Intro() {
   return (
     <section id="introduccion" ref={sectionRef} className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-24 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-24 items-center">
           <div>
-            <span className={`block text-[12px] font-mono font-medium uppercase tracking-[5px] text-gray-500 mb-7 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-              02 — Introducción
-            </span>
-
-            <h2 className={`text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-2px] mb-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
+            <h2 className={`text-[clamp(1.8rem,4vw,2.8rem)] font-bold leading-[1.15] tracking-[-0.5px] mb-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
               El laboratorio no debería quedarse en el campus
             </h2>
 
@@ -72,7 +68,7 @@ export default function Intro() {
               FUCOVI nace para cambiar eso: fuentes conmutadas compactas, versátiles y con precio justo — para que estudiantes y makers desarrollen habilidades reales, en la universidad o en casa.
             </p>
 
-            <div className={`flex gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '0.4s' }}>
+            <div className={`flex flex-col sm:flex-row gap-6 sm:gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '0.4s' }}>
               <div className="flex items-baseline gap-1">
                 <span className="font-mono text-[3rem] font-medium text-white leading-none">{count1}</span>
                 <span className="font-mono text-[1.5rem] font-normal text-gray-500">V</span>
@@ -87,7 +83,7 @@ export default function Intro() {
           </div>
 
           <div className={`flex justify-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`} style={{ transitionDelay: '0.3s' }}>
-            <div className="w-full max-w-[400px]">
+            <div className="w-full max-w-[300px] sm:max-w-[400px]">
               <svg viewBox="0 0 320 220" className="w-full h-auto text-white">
                 {/* Outer frame */}
                 <rect x="25" y="35" width="270" height="150" rx="14" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.85" />

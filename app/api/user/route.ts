@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import { memoryStore } from '@/lib/memory-store'
 import jwt from 'jsonwebtoken'
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key'
@@ -14,18 +14,17 @@ export async function GET(request: Request) {
     const token = authHeader.substring(7)
     const decoded = jwt.verify(token, JWT_SECRET) as { userId: string }
 
-    const user = await prisma.user.findUnique({
-      where: { id: decoded.userId },
-      include: { compras: true },
-    })
+    const user = await memoryStore.findUserById(decoded.userId)
 
     if (!user) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
+    const compras = await memoryStore.findComprasByUserId(decoded.userId)
+
     const { password, ...userWithoutPassword } = user
 
-    return NextResponse.json(userWithoutPassword)
+    return NextResponse.json({ ...userWithoutPassword, compras })
   } catch (error) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }

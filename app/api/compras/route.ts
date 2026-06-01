@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import { memoryStore } from '@/lib/memory-store'
 import jwt from 'jsonwebtoken'
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key'
@@ -16,14 +16,12 @@ export async function POST(request: Request) {
 
     const { producto, notas } = await request.json()
 
-    const compra = await prisma.compra.create({
-      data: {
-        userId: decoded.userId,
-        producto,
-        fechaCompra: new Date(),
-        garantiaHasta: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000), // 1 year warranty
-        notas,
-      },
+    const compra = await memoryStore.createCompra({
+      userId: decoded.userId,
+      producto,
+      fechaCompra: new Date(),
+      garantiaHasta: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000), // 1 year warranty
+      notas,
     })
 
     return NextResponse.json(compra, { status: 201 })

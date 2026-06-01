@@ -27,17 +27,13 @@ export default function Contact() {
           <img src="/logo.png" alt="FUCOVI Logo" className="w-full h-auto max-h-[500px] object-contain mx-auto" />
         </div>
 
-        <span className={`block text-[12px] font-mono font-medium uppercase tracking-[5px] text-gray-500 mb-7 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-          12 — Contacto
-        </span>
-
-        <h2 className={`text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-2px] mb-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
+        <h2 className={`text-[clamp(1.8rem,4vw,2.8rem)] font-bold leading-[1.15] tracking-[-0.5px] mb-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
           ¿Tienes preguntas?
         </h2>
         <p className={`text-[1.15rem] text-gray-400 leading-[1.9] max-w-[640px] mx-auto mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '0.2s' }}>
           Estamos aquí para ayudarte. Contáctanos por correo o WhatsApp.
         </p>
-        <div className={`flex flex-col md:flex-row gap-6 justify-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '0.3s' }}>
+        <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '0.3s' }}>
           <a href="mailto:fucovi.oficial@gmail.com" className="px-8 py-3.5 text-sm font-medium tracking-[0.04em] text-white bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition-all duration-250">
             fucovi.oficial@gmail.com
           </a>
@@ -46,7 +42,7 @@ export default function Contact() {
           </a>
         </div>
         <p className={`mt-16 text-gray-500 text-sm transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`} style={{ transitionDelay: '0.4s' }}>
-          © 2024 FUCOVI. Hecho en Colombia.
+          © 2026 FUCOVI. Pamplona, Colombia.
         </p>
       </div>
     </section>

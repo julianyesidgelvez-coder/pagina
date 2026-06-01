@@ -51,12 +51,8 @@ export default function Benefits() {
   return (
     <section id="beneficios" ref={sectionRef} className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl mx-auto">
-        <span className={`block text-[12px] font-mono font-medium uppercase tracking-[5px] text-gray-500 mb-7 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-          05 — Beneficios
-        </span>
-
-        <h2 className={`text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-2px] mb-14 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
-          Más equipo. Menos fricción.
+        <h2 className={`text-[clamp(1.8rem,4vw,2.8rem)] font-bold leading-[1.15] tracking-[-0.5px] mb-14 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
+          Más equipo, menos fricción
         </h2>
 
         <div className="flex flex-col gap-0 mt-14">
@@ -68,10 +64,10 @@ export default function Benefits() {
               }`}
               style={{ transitionDelay: `${0.2 + index * 0.15}s` }}
             >
-              <div className="font-mono text-[2.5rem] font-light text-gray-500 w-[70px]">{benefit.num}</div>
+              <div className="font-mono text-[2rem] sm:text-[2.5rem] font-light text-gray-500 w-[60px] sm:w-[70px]">{benefit.num}</div>
               <div>
                 <h3 className="text-[1.5rem] font-semibold mb-3 text-white">{benefit.title}</h3>
-                <p className="text-gray-400 text-[1.05rem] max-w-[520px] leading-[1.7]">{benefit.description}</p>
+                <p className="text-gray-400 text-[0.95rem] sm:text-[1.05rem] max-w-[520px] leading-[1.7]">{benefit.description}</p>
               </div>
             </div>
           ))}

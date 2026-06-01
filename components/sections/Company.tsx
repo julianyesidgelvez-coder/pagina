@@ -35,7 +35,7 @@ export default function Company() {
         </svg>
       ),
       title: 'Misión',
-      description: 'Democratizar el acceso a equipos de laboratorio de calidad para estudiantes y makers en Colombia y Latinoamérica.',
+      description: 'Diseñar, fabricar y comercializar Fuentes Conmutadas de Voltaje (0 a 30 voltios) e Intensidad (0 a 5 amperios), ofreciendo soluciones accesibles, seguras y funcionales para estudiantes, instituciones educativas y aficionados a la electrónica y la tecnología. Nuestra empresa busca facilitar el aprendizaje práctico y el desarrollo de proyectos tecnológicos mediante productos económicos, portátiles y de calidad.',
     },
     {
       icon: (
@@ -44,7 +44,7 @@ export default function Company() {
         </svg>
       ),
       title: 'Visión',
-      description: 'Ser la referencia en fuentes conmutadas educativas, reconocidos por calidad, precio y compromiso con la comunidad maker.',
+      description: 'Ser una empresa reconocida en Colombia por su innovación y accesibilidad, destacándose como una de las principales opciones para estudiantes y desarrolladores de proyectos tecnológicos. FUCOVI aspira a expandir su mercado a nivel nacional, incorporando nuevas versiones y tecnologías que contribuyan al aprendizaje y desarrollo de la electrónica y la robótica.',
     },
   ]
 
@@ -57,15 +57,11 @@ export default function Company() {
   return (
     <section id="empresa" ref={sectionRef} className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl mx-auto text-center">
-        <span className={`block text-[12px] font-mono font-medium uppercase tracking-[5px] text-gray-500 mb-7 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-          07 — Empresa
-        </span>
-
-        <h2 className={`text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-2px] mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
-          Tecnología accesible. Hecha en Colombia.
+        <h2 className={`text-[clamp(1.8rem,4vw,2.8rem)] font-bold leading-[1.15] tracking-[-0.5px] mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
+          Tecnología accesible, hecha en Colombia
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-8">
           {pillars.map((pillar, index) => (
             <div
               key={index}

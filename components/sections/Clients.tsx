@@ -69,15 +69,11 @@ export default function Clients() {
   return (
     <section id="clientes" ref={sectionRef} className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-6xl mx-auto text-center">
-        <span className={`block text-[12px] font-mono font-medium uppercase tracking-[5px] text-gray-500 mb-7 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-          06 — Clientes
-        </span>
-
-        <h2 className={`text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-2px] mb-14 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
+        <h2 className={`text-[clamp(1.8rem,4vw,2.8rem)] font-bold leading-[1.15] tracking-[-0.5px] mb-14 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.1s' }}>
           ¿Para quién es FUCOVI?
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
           {clients.map((client, index) => (
             <div
               key={index}

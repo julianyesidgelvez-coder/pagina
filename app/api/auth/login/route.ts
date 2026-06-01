@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import { memoryStore } from '@/lib/memory-store'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   try {
     const { email, password } = await request.json()
 
-    const user = await prisma.user.findUnique({ where: { email } })
+    const user = await memoryStore.findUserByEmail(email)
     if (!user) {
       return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 })
     }

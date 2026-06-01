@@ -40,32 +40,28 @@ export default function Hero() {
           </div>
         </div>
 
-        <span className={`block text-[12px] font-mono font-medium uppercase tracking-[5px] text-gray-500 mb-5 opacity-0 ${isVisible ? 'animate-fadeInUp' : ''}`} style={{ animationDelay: '0.5s' }}>
-          01 — Inicio
-        </span>
-
         <p className={`font-mono text-[0.75rem] tracking-[0.35em] uppercase text-gray-500 mb-4 opacity-0 ${isVisible ? 'animate-fadeInUp' : ''}`} style={{ animationDelay: '0.7s' }}>
           FUCOVI
         </p>
 
-        <h1 className={`text-[clamp(2rem,5.5vw,3.75rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white max-w-[14ch] mx-auto mb-5 opacity-0 ${isVisible ? 'animate-fadeInUp' : ''}`} style={{ animationDelay: '0.85s' }}>
-          Potencia de laboratorio. En tu mochila.
+        <h1 className={`text-[clamp(1.8rem,4vw,2.8rem)] font-bold leading-[1.15] tracking-[-0.5px] text-white max-w-[16ch] mx-auto mb-5 opacity-0 ${isVisible ? 'animate-fadeInUp' : ''}`} style={{ animationDelay: '0.85s' }}>
+          Potencia de laboratorio en tu mochila
         </h1>
 
         <p className={`text-[clamp(0.85rem,1.4vw,1rem)] text-gray-500 max-w-[36ch] mx-auto mb-7 leading-[1.6] opacity-0 ${isVisible ? 'animate-fadeInUp' : ''}`} style={{ animationDelay: '1.1s' }}>
-          Fuentes conmutadas portátiles y accesibles. Sin depender del equipo del campus.
+          Fuentes conmutadas portátiles y accesibles.
         </p>
 
         <Link href="/login" className={`inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-[0.04em] text-black bg-white border border-white rounded-full hover:bg-transparent hover:text-white hover:-translate-y-0.5 transition-all duration-250 mb-7 opacity-0 ${isVisible ? 'animate-fadeInUp' : ''}`} style={{ animationDelay: '1.25s' }}>
           Solicitar la tuya
         </Link>
 
-        <div className={`flex items-center justify-center gap-5 opacity-0 ${isVisible ? 'animate-fadeInUp' : ''}`} style={{ animationDelay: '1.3s' }}>
-          <span className="font-mono text-[16px] font-normal tracking-[3px] text-white">
+        <div className={`flex items-center justify-center gap-3 sm:gap-5 opacity-0 ${isVisible ? 'animate-fadeInUp' : ''}`} style={{ animationDelay: '1.3s' }}>
+          <span className="font-mono text-[14px] sm:text-[16px] font-normal tracking-[2px] sm:tracking-[3px] text-white">
             0V - 30V
           </span>
           <span className="w-6 h-[1px] bg-white/6" />
-          <span className="font-mono text-[16px] font-normal tracking-[3px] text-white">
+          <span className="font-mono text-[14px] sm:text-[16px] font-normal tracking-[2px] sm:tracking-[3px] text-white">
             0A - 5A
           </span>
         </div>
