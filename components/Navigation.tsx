@@ -62,7 +62,7 @@ export default function Navigation() {
 
       {/* Top Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-[1002] bg-black/85 backdrop-blur-6 border-b border-white/6">
-        <div className="h-[72px] px-8 flex items-center justify-center">
+        <div className="h-[72px] px-8 pr-16 flex items-center justify-start">
           <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide">
             {sections.map((section) => (
               <button
